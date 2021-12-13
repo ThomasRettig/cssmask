@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@import url('https://rsms.me/inter/inter-display.css');
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --font-heading: 'InterDisplay var';
+    --font-body: 'Inter';
+    --color-heading: hsl(72deg 86% 28%);
+}
+
+::selection {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+body {
+    background: #fff;
+    margin: 0;
+    transform-style: flat;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 80vh;
+    top: 0;
+    left: auto;
+    background: url(images/trekking-image.jpg) center top no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+h1 {
+    -webkit-mask: url(images/trekking-mask.png) center top no-repeat;
+    -webkit-mask-size: cover;
+    font-family: var(--font-heading), 'Inter Display';
+    font-variation-settings: "wght" 200;
+    font-weight: 200;
+    width: 100vw;
+    height: 80vh;
+    color: var(--color-heading);
+    margin: 0;
+    font-size: 15vw;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+h1 span {
+    position: fixed;
+    display: inline-block;
+    padding: 5vh 0 0 25vw;
+    transition: margin 1s ease-in-out;
+}
+
+section {
+    padding-top: 85vh;
+    margin: 0 18% 3em;
+    font-size: 1.2em;
+    z-index: 1;
+    color: #333;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: start;
+}
+
+section > div > p:first-of-type:first-letter {
+    font-size: 4.5em;
+    font-weight: bold;
+    font-family: var(--font-heading), 'Inter';
+    float: left;
+    margin-right: 1rem;
+    line-height: 6rem;
+}
+
+aside {
+    position: sticky;
+    top: 0;
+}
+
+aside > p {
+    margin-bottom: -10px;
+}
+
+p {
+    line-height: 1.4;
+    font-family: var(--font-body);
+    font-feature-settings: "cv05";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body,
+h1 {
+    transition: -webkit-transform 1.5s ease-out;
+}
+
+h1::before {
+    position: absolute;
+    content: ' ';
+    width: inherit;
+    height: inherit;
+    background: url(images/trekking-mask.png) center top no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity .5s ease-out;
+}
+
+.explain {
+    perspective: 1100px;
+    /* Only set perspective on HTML when needed or it interferes with position:fixed and masking */
+}
+
+.explain h1::before {
+    transition-delay: 1s;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+.explain h1 span:hover {
+    margin: 70px 0 0 0;
+}
+
+.explain body {
+    transform: rotateY(20deg) rotateX(4deg) scale(0.9);
+    transform-style: preserve-3d;
+}
+
+.explain header {
+    perspective: 900px;
+    transform-style: preserve-3d;
+}
+
+.explain h1 {
+    transform: translateZ(100px);
+}
