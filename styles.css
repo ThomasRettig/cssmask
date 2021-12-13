@@ -152,6 +152,8 @@ a:hover {
 
 #article > span {
     font-family: var(--font-body);
+    font-weight: 500;
+    opacity: 0.6;
 }
 
 .tags {
