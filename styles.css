@@ -22,6 +22,27 @@
     outline: none;
 }
 
+:target {
+    animation: yellowflash-bg 1.5s;
+}
+
+@media screen and (prefers-reduced-motion:reduce) {
+    * {
+        transition: 0s;
+        animation: none;
+    }
+}
+
+@keyframes yellowflash-bg {
+    0% {
+        background: #ff0
+    }
+
+    to {
+        background: 0 0
+    }
+}
+
 @media (max-width: 788px) {
     section {
         display: revert !important;
@@ -53,15 +74,15 @@ header {
 h1 {
     -webkit-mask: url(images/trekking-mask.png) center top no-repeat;
     -webkit-mask-size: cover;
-    font-family: var(--font-heading), 'Inter Display';
     font-variation-settings: "wght" 600;
     font-weight: 200;
     width: 100vw;
     height: 80vh;
     color: var(--color-heading);
     margin: 0;
-    font-size: 15vw;
+    font-size: 10vw;
     letter-spacing: -0.02em;
+    line-height: 10vw;
     position: relative;
     user-select: none;
 }
@@ -71,6 +92,16 @@ h1 span {
     display: inline-block;
     padding: 5vh 0 0 25vw;
     transition: margin 1s ease-in-out;
+}
+
+h1, h2 {
+    font-family: var(--font-heading), 'Inter Display';
+}
+
+h2 {
+    font-variation-settings: "wght" 750;
+    font-size: 35px;
+    margin-bottom: 0;
 }
 
 section {
@@ -119,15 +150,28 @@ a:hover {
 }
 
 .tags {
-    padding: 6.5px;
-    background: var(--color-blue-light);
-    border-radius: 10px;
+    padding: 8px;
+    background-color: #ecf5ff;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
+
+.tags:hover {
+    background-color: var(--color-blue-light);
+}
+
+/*.tags:not(:first-of-type) {
+    margin-left: 10px;
+}*/
 
 aside > p:last-of-type {
     position: relative;
     top: 5px;
     font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 body,
