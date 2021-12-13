@@ -120,6 +120,7 @@ section > div > p:first-of-type:first-letter {
     font-size: 4.5em;
     font-weight: bold;
     font-family: var(--font-heading), 'Inter';
+    text-transform: uppercase;
     float: left;
     margin-right: 1rem;
     line-height: 6rem;
@@ -149,10 +150,15 @@ a:hover {
     color: #0070f3;
 }
 
+#article > span {
+    font-family: var(--font-body);
+}
+
 .tags {
     padding: 8px;
     background-color: #ecf5ff;
     border-radius: 15px;
+    font-size: 90%;
     display: inline-block;
     margin-bottom: 10px;
 }
