@@ -7,16 +7,18 @@
     --font-heading: 'InterDisplay var';
     --font-body: 'Inter';
     --color-heading: hsl(72deg 86% 28%);
+    --color-blue: #0070f3;
+    --color-blue-light: #deedff;
 }
 
 ::selection {
-    background-color: #0070f3;
+    background-color: var(--color-blue);
     color: #fff;
 }
 
 :focus-visible {
     color: #0070f3;
-    background-color: #deedff;
+    background-color: var(--color-blue-light);
     outline: none;
 }
 
@@ -24,10 +26,6 @@
     section {
         display: revert !important;
         margin: 0 10% 3em !important;
-    }
-
-    seperator::after {
-        display: none;
     }
 
     aside {
@@ -96,28 +94,9 @@ section > div > p:first-of-type:first-letter {
     line-height: 6rem;
 }
 
-seperator[data-type="1"]::after {
-    content: "";
-    background-color: #ddd;
-    height: 2px;
-    width: 50px;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-}
-
-seperator[data-type="2"]::after {
-    content: "";
-    background-color: #ddd;
-    height: 2px;
-    width: 50px;
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-}
-
 aside {
     position: sticky;
+    top: 0;
 }
 
 aside > p {
@@ -137,6 +116,18 @@ a {
 
 a:hover {
     color: #0070f3;
+}
+
+.tags {
+    padding: 6.5px;
+    background: var(--color-blue-light);
+    border-radius: 10px;
+}
+
+aside > p:last-of-type {
+    position: relative;
+    top: 5px;
+    font-size: 90%;
 }
 
 body,
