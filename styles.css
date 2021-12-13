@@ -14,7 +14,7 @@
   color: #fff;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 788px) {
     section {
         display: revert !important;
         margin: 0 10% 3em !important;
@@ -78,6 +78,7 @@ section {
     display: grid;
     grid-template-columns: 0.4fr 1fr;
     align-items: start;
+    gap: 2em;
 }
 
 section > div > p:first-of-type:first-letter {
