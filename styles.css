@@ -14,6 +14,17 @@
   color: #fff;
 }
 
+@media (max-width: 680px) {
+    section {
+        display: revert !important;
+        margin: 0 10% 3em !important;
+    }
+
+    aside > p:first-of-type::after {
+        display: none;
+    }
+}
+
 body {
     background: #fff;
     margin: 0;
@@ -44,6 +55,7 @@ h1 {
     font-size: 15vw;
     letter-spacing: -0.02em;
     position: relative;
+    user-select: none;
 }
 
 h1 span {
@@ -71,6 +83,16 @@ section > div > p:first-of-type:first-letter {
     float: left;
     margin-right: 1rem;
     line-height: 6rem;
+}
+
+aside > p:first-of-type::after {
+    content: "";
+    background-color: #ddd;
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
 }
 
 aside {
