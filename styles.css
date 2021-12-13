@@ -23,6 +23,10 @@
     aside > p:first-of-type::after {
         display: none;
     }
+
+    aside {
+        position: initial !important;
+    }
 }
 
 body {
@@ -97,7 +101,6 @@ aside > p:first-of-type::after {
 
 aside {
     position: sticky;
-    top: 0;
 }
 
 aside > p {
