@@ -10,8 +10,14 @@
 }
 
 ::selection {
-  background-color: #0070f3;
-  color: #fff;
+    background-color: #0070f3;
+    color: #fff;
+}
+
+:focus-visible {
+    color: #0070f3;
+    background-color: #deedff;
+    outline: none;
 }
 
 @media (max-width: 788px) {
@@ -50,7 +56,7 @@ h1 {
     -webkit-mask: url(images/trekking-mask.png) center top no-repeat;
     -webkit-mask-size: cover;
     font-family: var(--font-heading), 'Inter Display';
-    font-variation-settings: "wght" 200;
+    font-variation-settings: "wght" 600;
     font-weight: 200;
     width: 100vw;
     height: 80vh;
@@ -117,6 +123,10 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    color: #0070f3;
 }
 
 body,
