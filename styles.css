@@ -86,6 +86,45 @@
 
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #303030 !important;
+    }
+
+    h2 {
+        color: #eee;
+    }
+
+    #article > p, aside > p:first-of-type {
+        color: #ccc !important;
+    }
+
+    .tags {
+        background-color: #363a3e !important;
+        color: #ccc;
+    }
+
+    aside p::-webkit-scrollbar {
+        background: #3c3c3c;
+        height: 8px;
+        border-radius: 10px;
+    }
+
+    aside p::-webkit-scrollbar-thumb {
+        background: #bbb;
+        border-radius: 100px;
+    }
+
+    aside p::-webkit-scrollbar-thumb:hover {
+        background: #ccc;
+        border-radius: 150px;
+    }
+
+    .tags:hover {
+        background-color: #eee !important;
+    }
+}
+
 body {
     background: #fff;
     margin: 0;
