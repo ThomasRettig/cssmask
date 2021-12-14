@@ -52,6 +52,34 @@
     aside {
         position: initial !important;
     }
+
+    h1 {
+        font-size: 10vw !important;
+        line-height: 10vw !important;
+    }
+
+    aside > p:last-of-type {
+        flex-direction: row !important;
+        overflow-x: scroll !important;
+        margin-bottom: 10px;
+    }
+
+    aside p::-webkit-scrollbar {
+        background: #fff;
+        height: 8px;
+        border-radius: 10px
+    }
+
+    aside p::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 100px;
+    }
+
+    aside p::-webkit-scrollbar-thumb:hover {
+        background: grey;
+        border-radius: 150px;
+    }
+
 }
 
 body {
@@ -80,9 +108,9 @@ h1 {
     height: 80vh;
     color: var(--color-heading);
     margin: 0;
-    font-size: 10vw;
+    font-size: 80px;
     letter-spacing: -0.02em;
-    line-height: 10vw;
+    line-height: 105%;
     position: relative;
     user-select: none;
 }
@@ -133,6 +161,10 @@ aside {
 
 aside > p {
     margin-bottom: -10px;
+}
+
+aside > p:first-of-type {
+    margin-top: 0;
 }
 
 p {
