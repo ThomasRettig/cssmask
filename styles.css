@@ -80,6 +80,10 @@
         border-radius: 150px;
     }
 
+    .tags {
+        margin-right: 6px !important;
+    }
+
 }
 
 body {
