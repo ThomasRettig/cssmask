@@ -38,11 +38,11 @@
 
 @keyframes yellowflash-bg {
     0% {
-        background: #ff0
+        background: #ff0;
     }
 
     to {
-        background: 0 0
+        background: 0 0;
     }
 }
 
@@ -128,7 +128,18 @@
     }
 
     .tags:hover {
-        background-color: #eee !important;
+        color: #ddd !important;
+        background-color: #4e4e4e !important;
+    }
+
+    header {
+        background: url(images/trekking-image-upscaled-grayscale.avif) center top no-repeat !important;
+        background-size: cover !important;
+        position: absolute !important;
+    }
+
+    h1 {
+        color: var(--color-medium-gray) !important;
     }
 }
 
