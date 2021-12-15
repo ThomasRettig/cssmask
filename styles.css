@@ -69,7 +69,7 @@
       }
 }
 
-@media (max-width: 788px) {
+@media screen and (max-width: 788px) {
     section {
         display: revert !important;
         margin: 0 10% 3em !important;
@@ -115,7 +115,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
@@ -185,6 +185,22 @@
             -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
           }
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) and (min-width: 1280px) {
+    header {
+        background: url(images/trekking-image-upscaled-grayscale-cropped.avif) center top no-repeat !important;
+        background-size: cover !important;
+        position: absolute !important;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) and (min-width: 1280px) {
+    header {
+        background: url(images/trekking-image-upscaled-cropped.avif) center top no-repeat !important;
+        background-size: cover !important;
+        position: absolute !important;
     }
 }
 
