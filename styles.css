@@ -26,24 +26,34 @@
 }
 
 :target {
-    animation: yellowflash-bg 1.5s;
+    animation: flash-bg 1.5s;
+    animation-timing-function: ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion:reduce) {
     * {
         transition: 0s;
-        animation: none;
+        animation-duration: 0s !important;
     }
 }
 
-@keyframes yellowflash-bg {
-    0% {
-        background: #ff0;
-    }
+@keyframes flash-bg {
+    from {
+        background: yellow;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
 
-    to {
-        background: 0 0;
-    }
+      50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      to {
+        background: transparent;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
 }
 
 @media (max-width: 788px) {
@@ -118,7 +128,7 @@
     }
 
     aside p::-webkit-scrollbar-thumb {
-        background: #bbb;
+        background: #aaa;
         border-radius: 100px;
     }
 
@@ -140,6 +150,25 @@
 
     h1 {
         color: var(--color-medium-gray) !important;
+    }
+
+    @keyframes flash-bg {
+        from {
+            background: var(--color-light-gray);
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+
+          50% {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+          }
+
+          to {
+            background: transparent;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
     }
 }
 
@@ -217,7 +246,7 @@ section > div > p:first-of-type:first-letter {
 
 aside {
     position: sticky;
-    top: 0;
+    top: 15px;
 }
 
 aside > p {
@@ -251,9 +280,9 @@ a:hover {
 }
 
 .tags {
-    padding: 8px;
+    padding: 8.5px;
     background-color: #ecf5ff;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 90%;
     display: inline-block;
     margin-bottom: 10px;
