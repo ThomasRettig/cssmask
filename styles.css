@@ -87,6 +87,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
     body {
         background: #303030 !important;
     }
@@ -96,6 +100,10 @@
     }
 
     #article > p, aside > p:first-of-type {
+        color: #ccc !important;
+    }
+
+    #article > span {
         color: #ccc !important;
     }
 
