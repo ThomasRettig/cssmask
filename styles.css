@@ -3,6 +3,12 @@
 @import url('https://rsms.me/inter/inter-display.css');
 @import url('https://rsms.me/inter/inter.css');
 
+@font-face {
+    src: url('BradleyInitialsDJR-Regular_COLRv1_Beta.woff2') format("woff2"),
+         url('BradleyInitialsDJR-Regular_COLRv1_Beta.woff') format("woff");
+    font-family: 'Bradley Initials';
+}
+
 :root {
     --font-heading: 'InterDisplay var';
     --font-body: 'Inter';
@@ -128,7 +134,7 @@
         color: #eee;
     }
 
-    #article > p, aside > p:first-of-type, #article > span {
+    #article > p, #article > span, aside > p:first-of-type {
         color: var(--color-light-gray) !important;
     }
 
@@ -225,6 +231,10 @@ header {
     position: absolute;
 }
 
+a {
+    color: inherit;
+}
+
 h1 {
     -webkit-mask: url(images/trekking-mask.png) center top no-repeat;
     -webkit-mask-size: cover;
@@ -270,14 +280,26 @@ section {
     gap: 2em;
 }
 
-section > div > p:first-of-type:first-letter {
-    font-size: 4.5em;
-    font-weight: bold;
-    font-family: var(--font-heading), 'Inter';
-    text-transform: uppercase;
+.dropcaps:first-letter {
+    font-size: 4.05em;
+    font-family: "Bradley Initials";
+    letter-spacing: -30px;
     float: left;
-    margin-right: 1rem;
-    line-height: 6rem;
+    margin-left: -1.5rem;
+    margin-right: 1.5rem;
+    line-height: 6.2rem;
+}
+
+#article :where(a) {
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.5px;
+    color: #ffffff;
+}
+
+h2 > span > a {
+    text-decoration: none !important;
 }
 
 aside {
@@ -298,11 +320,6 @@ p {
     line-height: 1.4;
     font-family: var(--font-body);
     font-feature-settings: "cv05";
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 a:hover {
@@ -334,11 +351,13 @@ a:hover {
     background-color: #ecf5ff;
     border-radius: 16px;
     font-size: 90%;
+    text-decoration: none;
     display: inline-block;
     margin-bottom: 10px;
 }
 
 .tags:hover {
+    color: #0070f3;
     background-color: var(--color-blue-light);
 }
 
