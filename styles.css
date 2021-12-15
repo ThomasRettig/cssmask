@@ -31,6 +31,10 @@
 }
 
 @media screen and (prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
     * {
         transition: 0s;
         animation-duration: 0s !important;
@@ -97,6 +101,9 @@
         margin-right: 6px !important;
     }
 
+    .copy {
+        margin-left: 0 !important;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -170,6 +177,10 @@
             transform: scale3d(1, 1, 1);
           }
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -273,6 +284,20 @@ a:hover {
     color: #0070f3;
 }
 
+.copy {
+    font-weight: 400;
+    font-size: 80%;
+    cursor: pointer;
+    margin-left: -38px;
+    user-select: none;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.copy:hover {
+    opacity: 1;
+}
+
 #article > span {
     font-family: var(--font-body);
     font-weight: 500;
@@ -280,9 +305,9 @@ a:hover {
 }
 
 .tags {
-    padding: 8.5px;
+    padding: 8px;
     background-color: #ecf5ff;
-    border-radius: 20px;
+    border-radius: 16px;
     font-size: 90%;
     display: inline-block;
     margin-bottom: 10px;
@@ -319,33 +344,4 @@ h1::before {
     background-size: cover;
     opacity: 0;
     transition: transform 1.5s ease-out, opacity .5s ease-out;
-}
-
-.explain {
-    perspective: 1100px;
-    /* Only set perspective on HTML when needed or it interferes with position:fixed and masking */
-}
-
-.explain h1::before {
-    transition-delay: 1s;
-    z-index: -1;
-    opacity: 0.75;
-}
-
-.explain h1 span:hover {
-    margin: 70px 0 0 0;
-}
-
-.explain body {
-    transform: rotateY(20deg) rotateX(4deg) scale(0.9);
-    transform-style: preserve-3d;
-}
-
-.explain header {
-    perspective: 900px;
-    transform-style: preserve-3d;
-}
-
-.explain h1 {
-    transform: translateZ(100px);
 }
