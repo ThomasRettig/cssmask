@@ -9,6 +9,9 @@
     --color-heading: hsl(72deg 86% 28%);
     --color-blue: #0070f3;
     --color-blue-light: #deedff;
+    --color-dark-gray: #303030;
+    --color-medium-gray: #363A3E;
+    --color-light-gray: #ccc;
 }
 
 ::selection {
@@ -92,24 +95,20 @@
     }
 
     body {
-        background: #303030 !important;
+        background: var(--color-dark-gray) !important;
     }
 
     h2 {
         color: #eee;
     }
 
-    #article > p, aside > p:first-of-type {
-        color: #ccc !important;
-    }
-
-    #article > span {
-        color: #ccc !important;
+    #article > p, aside > p:first-of-type, #article > span {
+        color: var(--color-light-gray) !important;
     }
 
     .tags {
-        background-color: #363a3e !important;
-        color: #ccc;
+        background-color: var(--color-medium-gray) !important;
+        color: var(--color-light-gray);
     }
 
     aside p::-webkit-scrollbar {
