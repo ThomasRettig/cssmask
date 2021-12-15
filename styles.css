@@ -4,14 +4,15 @@
 @import url('https://rsms.me/inter/inter.css');
 
 @font-face {
-    src: url('BradleyInitialsDJR-Regular_COLRv1_Beta.woff2') format("woff2"),
-         url('BradleyInitialsDJR-Regular_COLRv1_Beta.woff') format("woff");
+    src: url('BradleyInitials.woff2') format("woff2"),
+         url('BradleyInitials.woff') format("woff");
     font-family: 'Bradley Initials';
 }
 
 :root {
     --font-heading: 'InterDisplay var';
     --font-body: 'Inter';
+    --font-dropcap: 'Bradley Initials';
     --color-heading: hsl(72deg 86% 28%);
     --color-blue: #0070f3;
     --color-blue-light: #deedff;
@@ -42,7 +43,7 @@
     margin-left: 10px;
     font-weight: normal;
     opacity: 0.7;
-    font-family: 'Inter';
+    font-family: var(--font-body);
 }
 
 @media screen and (prefers-reduced-motion:reduce) {
@@ -170,8 +171,8 @@
         position: absolute !important;
     }
 
-    h1 {
-        color: var(--color-medium-gray) !important;
+    :root {
+        --color-heading: var(--color-dark-gray);
     }
 
     @keyframes flash-bg {
@@ -282,7 +283,7 @@ section {
 
 .dropcaps:first-letter {
     font-size: 4.05em;
-    font-family: "Bradley Initials";
+    font-family: var(--font-dropcap), var(--font-heading);
     letter-spacing: -30px;
     float: left;
     margin-left: -1.5rem;
